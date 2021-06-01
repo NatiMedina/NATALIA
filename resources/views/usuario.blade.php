@@ -39,19 +39,18 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
             <h3>Consultanos</h3>
     
-            <form action="/usuario" method="post">
-            @csrf
-        <input type="text"class="form-control" placeholder="ingresar nombre" name="nombre"><br>
-        <input type="text"class="form-control" placeholder="ingresar telefono" name="telefono"><br>
-        <input type="text" class="form-control" placeholder="ingresar email" name="dni" style="margin-top: 5px"><br>
-        <button class="btn btn-secondary mt-3  " type="submit">enviar</button>
-        </form>
-        <br>
-        <br>
-        <br>
-        <br>
+            <form id="datos" action="#" >
+                    @csrf
+                <input type="text"class="form-control" placeholder="ingresar nombre"  name="nombre" id='nombre'><br>
+                <input type="text"class="form-control" placeholder="ingresar telefono" name="telefono" id= "telefono" ><br>
+                <input type="text" class="form-control" placeholder="ingresar email" name="email" id= "mail" style="margin-top: 5px" ><br>
+                <button class="btn btn-secondary mt-3">enviar</button>
+            </form>
+                <br>
+                <br>
+                <br>
+                <br>
 
-        <p class="text-hidden"><h3>{{ $nombre ?? '' }}</h3> en breve estaremos respondiendo sus inquietudes o sugerencias. Gracias por elegirnos!</p>
 
     
 
@@ -71,8 +70,11 @@
  
 
 <script src="/jquery-3.6.0.min.js"></script>
-
-
+<script src="/funciones.js"></script>
+<script>
+    $(document).ready(function(){
+        login();
+    });
 </script>
 </body>
 </html>
