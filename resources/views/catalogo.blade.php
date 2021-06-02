@@ -47,7 +47,7 @@
     <div class="col-sm-12 col-md-10 col-lg-10 pt-4 "> 
 
 
-    
+    <p>total $ <label for=" "><span id="total"></span></label> </p>
 
 
 
@@ -66,9 +66,9 @@
     <tr>
       <th scope="row"class="p-4 " >1</th>
       <td><img src="/img/perf1.jpeg"class="p-4" alt=""></td>
-      <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
-      <td class="text-center"><h5 id="precio">$5000 </h5>
-      <input type="number" min="0" name="perf1" id="cantidad" value='0'class="py-2 m-1"><p>
+      <td id="perf1"><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
+      <td class="text-center"><h5 id="precio1"> 5000 </h5>
+      <input type="number" min="0" name="perf1" value='0' id="cant" precio1="50" class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -77,7 +77,7 @@
       <td><img src="/img/perf4.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$7000 </h5>
-      <input type="number" min="0" name="perf2" id="cantidad" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf2" id="cant2" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -86,7 +86,7 @@
       <td><img src="/img/perf5.jpeg" alt=""class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$8000 </h5>
-      <input type="number" min="0" name="perf3" id="cantidad" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf3" id="cant3" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -95,7 +95,7 @@
       <td><img src="/img/perf2.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$9000 </h5>
-      <input type="number" min="0" name="perf4" id="cantidad" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf4" id="cant4" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -104,7 +104,7 @@
       <td><img src="/img/perf3.jpeg" alt=""></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$14000 </h5>
-      <input type="number" min="0" name="perf5" id="cantidad" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf5" id="cant5" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -113,7 +113,7 @@
       <td><img src="/img/perf4.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$15000 </h5>
-      <input type="number" min="0" name="perf6" id="cantidad" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf6" id="cant6" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -124,7 +124,7 @@
  </form><h3>{{ $perf1 ?? '' }}</h3>
  
  
- <p>total $ <label for=" "><span id="total"></span></label> </p>
+ 
  
  </div>
 
@@ -141,42 +141,21 @@
  
 
 <script src="/jquery-3.6.0.min.js"></script>
-<script src="/funciones.js">
- 
-        // $(document).ready(function(){
-
-        // var perfumes = ['#perf1','#perf2'];
-
-        // perfumes.forEach(elemento => subtotal(elemento));
-
-
-            
-
-        // function subtotal(value){
-        //     botonPedido.click(function(){
-        //         var cant = parseInt( $(value).children('#cantidad').val() || 0);    
-        //         $(value).children('#cantidad').val(cant+1);
-        //     });
-
-        // }
-          
-      
-      $(document).ready(function()){
-
-        var perfumes = ["#perf1","#perf2","#perf3","#perf4","#perf5","#perf6"];
-        
-        var total = 0;
-
-        perfumes.foreach(total += subtotal(perfume));
-
-
-        document.getElementById("#total").textContent = total;
-
-        
-
-      });
-
+  
+<script src="/funciones.js"></script>
+  
+<script>
+$(document).ready(function(){
+    
+  
+    
+    $("#total").append(total());
+    
+   
+  });
+</script>
 
 </script>
+  <!-- var precio = $("#cant").val() * 10; -->
 </body>
 </html>
