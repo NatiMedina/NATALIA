@@ -39,12 +39,12 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
             <h3>Consultanos</h3>
     
-            <form id="datos" action="#" >
+            <form action="/usuario"id="datos" action="#" method="post  ">
                     @csrf
                 <input type="text"class="form-control" placeholder="ingresar nombre"  name="nombre" id='nombre'><br>
                 <input type="text"class="form-control" placeholder="ingresar telefono" name="telefono" id= "telefono" ><br>
-                <input type="text" class="form-control" placeholder="ingresar email" name="email" id= "mail" style="margin-top: 5px" ><br>
-                <button class="btn btn-secondary mt-3">enviar</button>
+                <input type="text" class="form-control" placeholder="ingresar email" name="email"  style="margin-top: 5px"id= "mail" ><br>
+                <button class="btn btn-secondary mt-3" >enviar</button>
             </form>
                 <br>
                 <br>

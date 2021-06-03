@@ -63,7 +63,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4 " >1</th>
       <td><img src="/img/perf1.jpeg"class="p-4" alt=""></td>
       <td id="perf1"><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
@@ -72,48 +72,48 @@
                             
                             </div></p></td>
     </tr>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4">2</th>
       <td><img src="/img/perf4.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$7000 </h5>
-      <input type="number" min="0" name="perf2" id="cant2" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf2" id="cant" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4">3</th>
       <td><img src="/img/perf5.jpeg" alt=""class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$8000 </h5>
-      <input type="number" min="0" name="perf3" id="cant3" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf3" id="cant" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4">4</th>
       <td><img src="/img/perf2.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$9000 </h5>
-      <input type="number" min="0" name="perf4" id="cant4" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf4" id="cant" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4">5</th>
       <td><img src="/img/perf3.jpeg" alt=""></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$14000 </h5>
-      <input type="number" min="0" name="perf5" id="cant5" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf5" id="cant" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
-    <tr>
+    <tr class="row-articulo">
       <th scope="row"class="p-4">6</th>
       <td><img src="/img/perf4.jpeg"class="p-4"></td>
       <td><p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa qui tenetur cupiditate sequi distinctio aliquam magnam, iure dignissimos sint maiores.</p></td>
       <td class="text-center"><h5 id="precio">$15000 </h5>
-      <input type="number" min="0" name="perf6" id="cant6" value='0'class="py-2 m-1"><p>
+      <input type="number" min="0" name="perf6" id="cant" value='0'class="py-2 m-1"><p>
                             
                             </div></p></td>
     </tr>
@@ -149,7 +149,7 @@ $(document).ready(function(){
     
   
     
-    $("#total").append(total());
+    iniciar();
     
    
   });

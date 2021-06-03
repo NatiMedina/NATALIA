@@ -43,7 +43,7 @@ function validar_mail(obj) {
 function login() {
     $('#datos').submit(function(e) {
         e.preventDefault();
-        if(validar_nombre($('#nombre')) && validar_telefono($("#telefono")) && validar_mail($("#mail"))) {
+        if(validar_nombre($('#nombre')) && validar_telefono($("#telefono")) && validar_mail($("#email"))) {
             alert("Datos ok");
         }
         alert("ok");
@@ -51,20 +51,28 @@ function login() {
 }
 
 
-function total(){
-
-    cantidades = [$("#cant").val(),$("#cant2").val(),$("#cant3").val(),$("#cant4").val(),$("#cant5").val(),$("#cant6").val()];
-    precios = [5000,7000,8000,9000,14000,15000];
-    total = 0;
-  
-    for(i = 0; i <= 5; i++){
-      if(cantidades[i] > 0){
-          total += cantidades[i] * precios[i];
-      }
-    }
+function calcular(articulos){
+    var total = 0;
+    articulos.forEach(articulo => {
+        total += articulo.cantidad * articulo.precio;
+    });
 
     return total;
-
 }
 
+function iniciar(){
+    var articulos = [];
+    $(".row-articulo").forEach(row => {
+        var articulo = {
+            cantidad = 0,
+            precio = parseInt(row.children("#precio").val().replace("$","")) || 0
+        };
 
+        articulos.push(articulo);
+
+        row.children("#cant").on("input", function(){
+            articulo.cantidad = parseInt($(this).val() || 0);
+            $("#total").text(calcular(articulos));
+        });
+    });
+}
