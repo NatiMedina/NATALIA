@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usuario</title>
-    <link rel="stylesheet" href="css/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-grid.css') }}">
 </head>
 
 <body style="background-color:#7952b3; font-family:verdana;">
@@ -39,20 +39,22 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
             <h3>Consultanos</h3>
     
-            <form action="/usuario"id="datos" action="#" method="post  ">
+            <form action="/usuario" method="POST" id="datos">
                     @csrf
                 <input type="text"class="form-control" placeholder="ingresar nombre"  name="nombre" id='nombre'><br>
                 <input type="text"class="form-control" placeholder="ingresar telefono" name="telefono" id= "telefono" ><br>
                 <input type="text" class="form-control" placeholder="ingresar email" name="email"  style="margin-top: 5px"id= "mail" ><br>
-                <button class="btn btn-secondary mt-3" >enviar</button>
+                <button class="btn btn-secondary mt-3" id="boton">enviar</button>
             </form>
                 <br>
                 <br>
                 <br>
                 <br>
 
+@if($nombre ?? '' )
+    <p>gracias {{ $nombre }}</p>
 
-    
+@endif 
 
             </div>
          </div>
@@ -69,8 +71,9 @@
 <body>
  
 
-<script src="/jquery-3.6.0.min.js"></script>
-<script src="/funciones.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('/js/funciones.js') }}"></script>
 <script>
     $(document).ready(function(){
         login();

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <footer> <div class="container-fluid" style="font-family:Liberation Sans;">
     <div class="row pt-5 ">
     <div class="col-sm-12 col-md-4 col-lg-4 pt-4 text-center text-white"><h5 class="pb-2"> <img src="/house.svg" alt="" width="25px" heigth="25px"> direcciones</h5>
